@@ -259,10 +259,15 @@ mongosh "<target-connection-string>"
 Then run:
 
 ```javascript
-use <database_name>
+use cosmicworks
+```
 
-const docs = JSON.parse(fs.readFileSync("<collection_name>.json", "utf8"))
-db.getCollection("<collection_name>").insertMany(docs)
+```javascript
+const data = JSON.parse(fs.readFileSync("sample-data/movies_with_vectors.json", "utf8"))
+```
+
+```javascript
+db.movies.insertMany(data)
 ```
 
 > Option 2 and Option 3 are offline copy/import methods. They do not provide online replication state tracking or cutover orchestration.
