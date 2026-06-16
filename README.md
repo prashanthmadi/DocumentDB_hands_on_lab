@@ -89,4 +89,14 @@ This workshop uses the shared movie dataset:
 
 ---
 
+## Contributors
+
+- [Prashanth Madi](https://github.com/prashanthmadi)
+- [Hemin-MSFT](https://github.com/Hemin-MSFT)
+- [jkarasha](https://github.com/jkarasha)
+- Maoshan Liao
+- [Manish Pandey](https://github.com/Biksmind)
+
+---
+
 [Start with Module 0 ->](0-Prework-and-Prerequisites/README.md)
