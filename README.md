@@ -39,8 +39,8 @@ Prework starts here:
 | 10:00 - 10:15 AM | 15 min | Break | |
 | 10:15 - 12:15 PM | 2 hours | Lab 2: Cluster Setup and Migration | Provision cluster, configure access, and complete migration workflow |
 | 12:15 - 1:00 PM | 45 min | Lunch | |
-| 1:00 - 3:00 PM | 2 hours | Lab 3: Queries, Search, RAG, and Performance | CRUD, aggregation, text/vector search, and explain/index exercises |
-| 3:00 - 3:30 PM | 30 min | Lab 4: MCP Server Demo | Instructor-led demo of Copilot + MCP with DocumentDB |
+| 1:00 - 1:30 PM | 30 min | Lab 4: MCP Server Demo | Instructor-led demo of Copilot + MCP with DocumentDB |
+| 1:30 - 3:30 PM | 2 hours | Lab 3: Queries, Search, RAG, and Performance | CRUD, aggregation, text/vector search, and explain/index exercises |
 | 3:30 - 3:45 PM | 15 min | Lab 5: Wrap and Next Steps | Recap, Q&A, and next-action planning |
 
 ---
