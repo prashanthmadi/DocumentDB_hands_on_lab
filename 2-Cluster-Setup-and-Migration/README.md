@@ -234,6 +234,20 @@ Choose one of the following options.
 
 Use this if the migration wizard is unavailable.
 
+Install prerequisite (Windows) if `mongoimport` is missing:
+
+```powershell
+winget install MongoDB.DatabaseTools
+```
+
+After install, close and reopen terminal and verify:
+
+```powershell
+mongoimport --version
+```
+
+Run `mongoexport` and `mongoimport` from terminal (PowerShell or CMD), not inside `mongosh`.
+
 1. Export from source MongoDB:
 
 ```bash
@@ -320,3 +334,71 @@ Key points to show:
 - [ ] You created or observed an offline migration.
 - [ ] You validated document counts in the target.
 - [ ] You understand when online migration is needed.
+
+## Troubleshooting
+
+Use this quick list when commands fail during the workshop.
+
+### 1) `mongosh` command not found
+
+Install and verify:
+
+```powershell
+winget install MongoDB.Shell
+mongosh --version
+```
+
+If this works in external CMD but not in VS Code terminal, fully close and reopen VS Code, then open a new terminal.
+
+### 2) `mongoimport` command not found
+
+Install MongoDB Database Tools:
+
+```powershell
+winget install MongoDB.DatabaseTools
+mongoimport --version
+```
+
+If still not found, this is usually PATH refresh. Close and reopen terminal.
+
+As a direct fallback, run by full path (adjust version folder if needed):
+
+```cmd
+"C:\Program Files\MongoDB\Tools\100\bin\mongoimport.exe" --version
+```
+
+### 3) `mongoimport` used inside `mongosh`
+
+`mongoimport` is a terminal tool, not a `mongosh` command.
+
+- Run `mongoimport` in CMD or PowerShell.
+- Run `db.*` commands inside `mongosh`.
+
+### 4) Connection string issues in terminal
+
+Always wrap the full connection string in double quotes:
+
+```bash
+mongosh "<target-connection-string>"
+```
+
+Without quotes, terminal parsing can break on query string separators.
+
+### 5) `ECONNREFUSED 127.0.0.1:27017`
+
+This happens when running plain `mongosh` with no URI. It tries local MongoDB.
+
+Use:
+
+```bash
+mongosh "<target-connection-string>"
+```
+
+### 6) Network timeout or authentication failed
+
+Check in this order:
+
+1. Cluster deployment is complete and status is running.
+2. Current public IP is added under networking and saved.
+3. Username/password are correct.
+4. Connection string includes `tls=true` and `authMechanism=SCRAM-SHA-256`.
