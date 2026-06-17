@@ -310,6 +310,8 @@ Validate:
 
 Depending on workshop time and environment readiness, this may be run as either a participant activity or an instructor demo.
 
+> **Watch:** [Online migration walkthrough (6:52 - 15:17)](https://youtu.be/OYtmeH0TSm4?t=410)
+
 Key points to show:
 
 1. Start an online migration job.
